@@ -101,6 +101,30 @@
       letter-spacing: 1px;
     }
     .form-title span { color: var(--red); }
+    .event-info {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      margin: 12px 0 14px;
+    }
+    .event-info span {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 16px;
+      border-radius: 999px;
+      background: rgba(91, 42, 134, 0.08);
+      color: var(--purple);
+      font-size: 14px;
+      font-weight: 600;
+    }
+    .event-info span.date {
+      background: linear-gradient(135deg, var(--purple), var(--red));
+      color: #fff;
+      box-shadow: 0 6px 16px rgba(224, 31, 43, 0.25);
+    }
+    .event-info svg { flex-shrink: 0; }
     .form-subtitle {
       text-align: center;
       color: var(--muted);
@@ -175,6 +199,7 @@
       .cme-badge { top: 46%; right: 3%; width: 20%; }
       form { margin-top: -30px; padding: 0 18px 28px; }
       .form-title { font-size: 24px; }
+      .event-info span { font-size: 13px; padding: 7px 13px; }
       .grid { grid-template-columns: 1fr; }
       button { font-size: 16px; padding: 16px; }
       .page-footer { grid-template-columns: 1fr; padding: 18px; }
@@ -195,6 +220,11 @@
 
     <form id="registration-form">
       <h1 class="form-title">Register <span>Now</span></h1>
+      <div class="event-info">
+        <span class="date"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>Friday, 20 November 2026</span>
+        <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>1:00 PM – 5:30 PM</span>
+        <span><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a7 7 0 0 0-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>Hilton Riyadh Hotel &amp; Residences</span>
+      </div>
       <p class="form-subtitle">Please fill in all the required information</p>
 
       <div class="grid">
